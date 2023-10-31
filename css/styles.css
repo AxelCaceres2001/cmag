@@ -360,15 +360,15 @@ body {
 }
 
 .redes__item--linkedin {
-    background-image: url(/img/icons/linkedin_icon.svg);
+    background-image: url(../img/icons/linkedin_icon.svg);
 }
 
 .redes__item--github {
-    background-image: url(/img/icons/github_icon.svg);
+    background-image: url(../img/icons/github_icon.svg);
 }
 
 .redes__item--instagram {
-    background-image: url(/img/icons/instagram_icon.svg);
+    background-image: url(../img/icons/instagram_icon.svg);
 }
 
 .redes__item:hover{
