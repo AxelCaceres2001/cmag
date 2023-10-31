@@ -1,15 +1,18 @@
 const btn = document.getElementById('button');
 
 document.getElementById('form').addEventListener('submit', function(event) {
+  
   event.preventDefault();
 
-  btn.disabled = true;
-  btn.textContent = 'ENVIANDO...';
+  if(validateForm()) {
 
-  const serviceID = 'default_service';
-  const templateID = 'template_y6rl60q';
+    btn.disabled = true;
+    btn.textContent = 'ENVIANDO...';
+  
+    const serviceID = 'default_service';
+    const templateID = 'template_y6rl60q';
 
-  emailjs.sendForm(serviceID, templateID, this)
+    emailjs.sendForm(serviceID, templateID, this)
     .then(() => {
       const toastLiveExample = document.getElementById('liveToast');
       
@@ -25,4 +28,5 @@ document.getElementById('form').addEventListener('submit', function(event) {
       btn.value = 'Send Email';
       alert(JSON.stringify(err));
     });
+  }
 });
